@@ -19,19 +19,29 @@ def main():
 
             match menu:
                 case 1:
-                    pass
+                    nome = input("Digite o nome do cliente: ")
+                    cpf = int(input("Digite o CPF do cliente: "))
+                    cliente = Banco(nome, cpf)
+                    Banco.criar_conta(cliente)
                 
                 case 2:
-                    pass
+                    Banco.conta = input("Digite seu cpf: ")
+                    valor = float(input("Digite o valor do saque: "))
+                    Banco.saque(valor)
                 
                 case 3:
-                    pass
+                    valor = float(input("Digite o valor do depósito: "))
+                    Banco.deposito(valor)
 
                 case 4:
-                    pass
+                    Banco.origem = input("Digite seu cpf: ")
+                    Banco.destino = input("Digite o destinatário: ")
+                    valor = float(input("Digite o valor da transferência: "))     
+                    Banco.transferir               
 
                 case 5:
-                    pass
+                    Banco.conta = (input("Digite seu cpf: "))
+                    print(Banco.saldo)
 
                 case 0:
                     print("SAINDO ...")
